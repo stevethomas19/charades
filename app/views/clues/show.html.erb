@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @clue.body %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @clue.category %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @clue.player_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @clue.game_id %>
+</p>
+
+<%= link_to 'Edit', edit_clue_path(@clue) %> |
+<%= link_to 'Back', clues_path %>
