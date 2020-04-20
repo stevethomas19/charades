@@ -1,0 +1,37 @@
+<%= form_with(model: clue, local: true) do |form| %>
+  <% if clue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clue.errors.count, "error") %> prohibited this clue from being saved:</h2>
+
+      <ul>
+        <% clue.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.number_field :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_id %>
+    <%= form.number_field :game_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
